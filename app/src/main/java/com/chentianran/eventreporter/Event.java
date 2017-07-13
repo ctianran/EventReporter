@@ -8,7 +8,10 @@ public class Event {
     /**
      * All data for a event.
      */
+    private int repost;
     private String title;
+    private String imgUri;
+
     private String address;
     private String description;
     private int good;
@@ -18,6 +21,8 @@ public class Event {
     private String location;
     private long time;
     private String username;
+
+
 
     /**
      * Constructor
@@ -29,11 +34,37 @@ public class Event {
     }
 
     public Event() {}
+
+    public int getRepost() {
+        return repost;
+    }
+
+    public void setRepost(int repost) {
+        this.repost = repost;
+    }
+
+    public String getImgUri() {
+        return imgUri;
+    }
+
+    public void setImgUri(String imgUri) {
+        this.imgUri = imgUri;
+    }
+
     /**
      * Getters for private attributes of Event class.
      */
+
     public String getTitle() { return this.title; }
     public String getAddress() { return this.address; }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
     public String getDescription() {
         return description;
