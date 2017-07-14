@@ -15,6 +15,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -44,7 +46,6 @@ public class MainActivity extends AppCompatActivity implements EventFragment.OnI
         mSubmitButton = (Button) findViewById(R.id.submit);
         mRegisterButton = (Button) findViewById(R.id.register);
 
-
         mRegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,6 +72,10 @@ public class MainActivity extends AppCompatActivity implements EventFragment.OnI
             }
         });
 
+        //AdView
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         mSubmitButton.setOnClickListener(new View.OnClickListener() {
             @Override
